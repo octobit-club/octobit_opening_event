@@ -50,6 +50,69 @@
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
+.p-same-line {
+  margin: 0;
+  display: inline;
+}
+.font-change {
+  font-size: 60px;
+}
+.python-white {
+  color: #cfcfcf;
+  margin: 0;
+  display: inline;
+}
+.python-red {
+  color: #ff3652;
+  margin: 0;
+  display: inline;
+}
+.python-blue {
+  color: #03e3fc;
+  margin: 0;
+  display: inline;
+}
+.python-purple {
+  color: #a776da;
+  margin: 0;
+  display: inline;
+}
+.python-orange {
+  color: #ec9037;
+  margin: 0;
+  display: inline;
+}
+.python-green1 {
+  color: #7fe400;
+  margin: 0;
+  display: inline;
+}
+.python-green2 {
+  color: #67a052;
+  margin: 0;
+  display: inline;
+}
+
+.Challenge-btn {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  color: red;
+}
+.glow-red {
+  color: red; /* Base color of the text */
+  text-shadow: 0 0 10px red, /* Inner glow */ 0 0 20px red,
+    /* Outer glow */ 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red; /* Strongest glow */
+}
+.glow-green {
+  color: green; /* Base color of the text */
+  text-shadow: 0 0 10px green, /* Inner glow */ 0 0 20px green,
+    /* Outer glow */ 0 0 30px green, 0 0 40px green, 0 0 50px green,
+    0 0 60px green; /* Strongest glow */
+  cursor: default !important;
+}
+.header-python {
+}
 .try {
   padding-top: 20px !important;
   padding-right: 10px;
@@ -60,22 +123,59 @@
 .cursur {
   cursor: pointer;
 }
+/*coding container*/
+.code-container {
+  background-color: #010b24;
+  color: #333333;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  scrollbar-width: none;
+
+  overflow-x: scroll;
+}
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.center-btn {
+  margin-top: 50px;
+}
+.coding {
+  color: white;
+  text-shadow: 0 0 10px white, /* Inner glow */ 0 0 20px white;
+}
+
+.a {
+  color: #ff79c6;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
+}
 .flag {
   /*invisible*/
   opacity: 0;
 }
 /*the password pages*/
 .login-container {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.login-container2 {
+  background-color: #010b24;
+  box-shadow: #000;
+}
 .card {
   width: 100%;
   max-width: 400px;
 }
+
 .form-control:focus {
   border-color: red !important; /* Red border */
   box-shadow: 0 0 5px red !important; /* Red glow */

@@ -8,7 +8,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>OCTOBIT event</title>
-    <link rel="icon" href="/images/icon2.png" type="image/png" />
+    <link rel="icon" href="/images/icon2.ico" type="image/ico">
 
     <link
       rel="stylesheet"
@@ -28,7 +28,7 @@
       href="//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <script defer src="js/main.js"></script>
+    <script defer src="js/quest1.js"></script>
   </head>
 
   <body>
@@ -84,20 +84,22 @@
               <div class="row">
               <div class="col-xl-12">
                 <h1 class="display-1 bold color_white content__title text-center">
-                  <span class="color_danger">The solution is here  </span><span class="vim-caret">&nbsp;</span>
+                  <span class="color_white font-change">72 61 6d 69 34 37 20 6c 69 65 64 20 28 35 37 34 33 35 34 38 36 29   </span>
                 </h1>
-                <p class="text-grey text-spacey text-center hackerFont lead flag">
-                  rami47 lied (5644561655161)
-                </p>
-    
-                    <div class="row text-center pt-5">
-                      <div class="col-xl-12">
-                        <button
-                        class="btn btn-outline-danger btn-shadow px-3my-2 ml-0 ml-sm-1 text-left typewriter"
-                          onclick="(function(){window.location.href='quest1.html'})();"
-                        >
-                        <h4>go to the next chalenge</h4>
-                    </button>
+                
+                <div class="login-container">
+                  <div class="card p-4 shadow-lg login-container2">
+                      <h2 class="card-title text-center hackerFont mb-4">Enter the flag</h2>
+                      <form method="POST" id="login-form">
+                          <div class="form-group">
+                              <input name="flag" type="text" class="form-control" id="password" placeholder="Flag" autocomplete="off" required  >
+                          </div>
+                          <button type="submit" id="lgoin-btn" class="btn btn-outline-danger btn-shadow px-3my-2 ml-0 ml-sm-1 text-left typewriter">Submit</button>
+                      </form>
+                      <p id="error-message" class="text-center mt-2">Incorrect flag. Please try again.</p>
+                  </div>
+              </div>
+                    
                 </div>
             </div>
         </div>
