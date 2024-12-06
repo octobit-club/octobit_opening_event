@@ -63,17 +63,20 @@
   display: inline;
 }
 .python-red {
-  color: #ff3652;
+  color: #f0006884;
   margin: 0;
   display: inline;
 }
+.python-pink {
+  color: #e06c75;
+}
 .python-blue {
-  color: #03e3fc;
+  color: #61afef;
   margin: 0;
   display: inline;
 }
 .python-purple {
-  color: #a776da;
+  color: #c678dd;
   margin: 0;
   display: inline;
 }
@@ -82,8 +85,11 @@
   margin: 0;
   display: inline;
 }
+.python-yellow {
+  color: #e9d60a;
+}
 .python-green1 {
-  color: #7fe400;
+  color: #98c379;
   margin: 0;
   display: inline;
 }
