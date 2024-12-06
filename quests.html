@@ -75,29 +75,17 @@
                     <!-- Challenge 1 ends -->
                 
                     <span class="python-green1">print</span>(<span class="python-pink">"="</span> * 50)<br>
-                    <span class="python-green1">print</span>(<span class="python-pink">"🌍 WORLD SAVER 3000 🌍"</span>.<span style="color: #61afef;">center</span>(50))<br>
+                    <span class="python-green1">print</span>(<span class="python-pink">"🌍 WORLD SAVER 3000 🌍"</span>.<span class="python-blue">center</span>(50))<br>
                     <span class="python-green1">print</span>(<span class="python-pink">"="</span> * 50)<br>
-                    
-                    <span class="python-purple">def</span> generate_crisis():<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;crises = [<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"Global Warming"</span>,<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"Alien Invasion"</span>,<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"Asteroid Impact"</span>,<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"Global Pandemic"</span>,<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"Nuclear Meltdown"</span>,<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"AI Overlord Takeover"</span><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;]<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">return</span> random.<span style="color: #61afef;">choice</span>(crises)<br>
-                
                     <!-- Challenge 2 -->
                     <button class="Challenge-btn glow-red" onclick="window.location.href='quest2.html';">def inspecting_elements():</button> <br>
                     <!-- Challenge 2 ends -->
-                
+                    
                     team = [<span class="python-pink">"Engineer"</span>, <span class="python-pink">"Scientist"</span>, <span class="python-pink">"Pilot"</span>, <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"Doctor"</span>, <span class="python-pink">"Strategist"</span>, <span class="python-pink">"Technician"</span>]<br>
-                    random.<span style="color: #61afef;">shuffle</span>(team)<br>
+                    random.<span class="python-blue">shuffle</span>(team)<br>
                     <span class="python-purple">return</span> team[:3]<br>
-                
+                    
                     <!-- Challenge 3 -->
                     <button class="Challenge-btn glow-red" onclick="window.location.href='quest3.html';">def ascii_code():</button> <br>
                     <!-- Challenge 3 ends -->
@@ -112,26 +100,39 @@
                     }<br>
                     <span class="python-purple">return</span> solutions.get(crisis, <span class="python-pink">"Unknown Solution"</span>)<br>
                 
+                    <!-- Challenge 4 -->
+                    <button class="Challenge-btn glow-red" onclick="window.location.href='quest4.html';">def generate_crisis():</button> <br>
+                    <!-- Challenge 4 ends -->
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;crises = [<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"Global Warming"</span>,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"Alien Invasion"</span>,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"Asteroid Impact"</span>,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"Global Pandemic"</span>,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"Nuclear Meltdown"</span>,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"AI Overlord Takeover"</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;]<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">return</span> random.<span class="python-blue">choice</span>(crises)<br>
+                
                     <span class="python-green1">print</span>(f"🚨 Crisis Detected: {crisis}!")<br>
                     <span class="python-green1">print</span>(<span class="python-pink">"🌟 Assembling team..."</span>)<br>
                     <span class="python-purple">for</span> member <span class="python-purple">in</span> team:<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(f"- {member} is ready!")<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;time.<span style="color: #61afef;">sleep</span>(0.5)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;time.<span class="python-blue">sleep</span>(0.5)<br>
                     <span class="python-green1">print</span>(f"✅ Solution: {crisis_solution(crisis)}")<br>
-                    time.<span style="color: #61afef;">sleep</span>(1)<br>
-                    success = random.<span style="color: #61afef;">random</span>() > 0.2<br>
+                    time.<span class="python-blue">sleep</span>(1)<br>
+                    success = random.<span class="python-blue">random</span>() > 0.2<br>
                     <span class="python-purple">if</span> success:<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(<span class="python-pink">"🎉 The team successfully saved the world!"</span>)<br>
                     <span class="python-purple">else</span>:<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(<span class="python-pink">"💔 The mission failed. Retrying..."</span>)<br>
                     <span class="python-purple">return</span> success<br>
-
-    <span class="python-purple">def</span> global_update(success):<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">if</span> success:<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(<span class="python-pink">"🌍 The world celebrates its saviors! 🌟"</span>)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">else</span>:<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(<span class="python-pink">"💥 Things got worse... but hope is eternal!"</span>)<br>
-    
+                    <span class="python-purple">def</span> global_update(success):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">if</span> success:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(<span class="python-pink">"🌍 The world celebrates its saviors! 🌟"</span>)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">else</span>:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(<span class="python-pink">"💥 Things got worse... but hope is eternal!"</span>)<br>
+                    
     <span class="python-purple">def</span> simulate_future():<br>
     &nbsp;&nbsp;&nbsp;&nbsp;events = [<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"Peace Treaty Signed Between Nations"</span>,<br>
@@ -142,9 +143,9 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-pink">"Sudden Economic Collapse"</span><br>
     &nbsp;&nbsp;&nbsp;&nbsp;]<br>
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(<span class="python-pink">"🔮 Future Events:"</span>)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">for</span> i <span class="python-purple">in</span> <span style="color: #61afef;">range</span>(5):<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(f"- {random.<span style="color: #61afef;">choice</span>(events)}")<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time.<span style="color: #61afef;">sleep</span>(0.5)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">for</span> i <span class="python-purple">in</span> <span class="python-blue">range</span>(5):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(f"- {random.<span class="python-blue">choice</span>(events)}")<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time.<span class="python-blue">sleep</span>(0.5)<br>
     
     <span class="python-purple">def</span> main():<br>
     &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print_banner()</span><br>
@@ -159,9 +160,9 @@
     
     <span class="python-purple"># Simulate the mission multiple times</span><br>
     <span class="python-purple">if</span> __name__ == <span class="python-pink">"__main__"</span>:<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">for</span> _ <span> class="python-purple">in</span> <span style="color: #61afef;">range</span>(3):<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">for</span> _ <span> class="python-purple">in</span> <span class="python-blue">range</span>(3):<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main()<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time.<span style="color: #61afef;">sleep</span>(2)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time.<span class="python-blue">sleep</span>(2)<br>
                 </code>
                 
             </pre>
