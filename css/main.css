@@ -59,7 +59,12 @@
 }
 .font-fam {
   font-family: monospace !important;
-  font-weight: 900 !important;
+  font-weight: 1000 !important;
+  font-size: 100px;
+}
+.font-fam2 {
+  font-family: monospace !important;
+  font-weight: 200 !important;
 }
 .python-white {
   color: #cfcfcf;
