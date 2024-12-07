@@ -8,8 +8,8 @@ const ChallengeProgress = require("../models/ChallengeProgress");
 exports.submitAndSolveChallenge = async (req, res) => {
   const { challengeId } = req.params; // Challengeid from url
   const { flag } = req.body;
-  const participantId = req.participant.id; // Participant connecté (via middleware)
-  const teamId = req.participant.teamId; // Équipe du participant
+  const participantId = req.participant.id; // (via middleware)
+  const teamId = req.participant.teamId; 
 
   try {
     // 1. Récupérer le challenge de la base

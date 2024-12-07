@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const challengeRouter = require('./routes/challengeroutes')
 const teamRouter = require('./routes/teamroutes')
 require("dotenv").config();
+const cors = require('cors')
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -12,6 +13,9 @@ const URI = process.env.URI;
 app.use(express.json());
 app.use('/api', challengeRouter);
 app.use('/api',teamRouter)
+app.use(cors({
+  origin:'http://localhost:3000'
+}))
 // MongoDB Connection
 mongoose
   .connect(URI)
