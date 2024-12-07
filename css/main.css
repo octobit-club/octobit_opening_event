@@ -57,6 +57,10 @@
 .font-change {
   font-size: 60px;
 }
+.font-fam {
+  font-family: monospace !important;
+  font-weight: 900 !important;
+}
 .python-white {
   color: #cfcfcf;
   margin: 0;
@@ -98,6 +102,9 @@
   margin: 0;
   display: inline;
 }
+.python-green3 {
+  color: #07eb3c;
+}
 
 .Challenge-btn {
   all: unset;
@@ -105,7 +112,7 @@
   cursor: pointer;
   color: red;
 }
-.python-orange2{
+.python-orange2 {
   color: #d37506;
 }
 .glow-red {
