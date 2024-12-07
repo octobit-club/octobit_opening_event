@@ -105,6 +105,9 @@
   cursor: pointer;
   color: red;
 }
+.python-orange2{
+  color: #d37506;
+}
 .glow-red {
   color: red; /* Base color of the text */
   text-shadow: 0 0 10px red, /* Inner glow */ 0 0 20px red,
