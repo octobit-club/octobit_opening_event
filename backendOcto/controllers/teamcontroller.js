@@ -25,12 +25,13 @@ exports.joinTeam = async (req, res) => {
   const { email, name, teamPassword } = req.body;
 
   try {
-    // Trouver l'équipe et vérifier le mot de passe
     const team = await Team.findOne({ password: teamPassword });
     if (!team) {
-      return res
-        .status(404)
-        .json({ message: "Team not found or incorrect password." });
+      return res.status(404).json({
+        status: "error",
+        title: "Authentication Failed",
+        message: "Team not found or incorrect password.",
+      });
     }
 
     let participant = await Participant.findOne({ email });
