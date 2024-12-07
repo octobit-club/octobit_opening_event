@@ -110,7 +110,15 @@
 .python-green3 {
   color: #07eb3c;
 }
-
+.cursur_no {
+  cursor: not-allowed;
+  color: grey;
+  background-color: grey;
+}
+.cursur_no:hover {
+  color: #333333;
+  background-color: #333333;
+}
 .Challenge-btn {
   all: unset;
   display: inline-block;
