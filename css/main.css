@@ -66,6 +66,12 @@
   font-family: monospace !important;
   font-weight: 200 !important;
 }
+.font-fam3 {
+  font-family: monospace !important;
+  font-weight: 1000 !important;
+  font-size: 50px;
+}
+
 .python-white {
   color: #cfcfcf;
   margin: 0;
@@ -183,7 +189,7 @@
   cursor: pointer;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 .flag {
   /*invisible*/

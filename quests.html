@@ -78,22 +78,22 @@
                 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">upper_case_letters</span> = <span class="python-pink">""</span><br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">for</span> <span class="python-blue">char</span> <span class="python-purple">in</span> <span class="python-blue">phrase</span>:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">if</span> char.<span class="python-blue">isupper</span>():<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;upper_case_letters += <span class="python-blue">char</span><br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">for</span> <span class="python-blue">char</span> <span class="python-purple">in</span> <span class="python-blue">phrase</span>:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">if</span> char.<span class="python-blue">isupper</span>():<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;upper_case_letters += <span class="python-blue">char</span><br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">return</span> upper_case_letters<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">return</span> upper_case_letters<br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">phrase</span> = <span class="python-pink">input("Enter your phrase :")</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">upper_case_letters</span> = upper_case(<span class="python-blue">phrase</span>)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(upper_case_letters)  <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">phrase</span> = <span class="python-pink">input("Enter your phrase :")</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">upper_case_letters</span> = upper_case(<span class="python-blue">phrase</span>)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(upper_case_letters)  <br>
                     <!-- Challenge 2 -->
                     <button class="Challenge-btn glow-red" onclick="window.location.href='quest2.html';">def inspecting_elements():</button> <br>
                     <!-- Challenge 2 ends -->
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">hint</span> = <span class="python-pink">"Hmm... Something seems hidden. Maybe try inspecting the page source?"</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(hint)  <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(hint)  <br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;give_inspect_hint()  <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;give_inspect_hint()  <br>
                     
                     
                     <!-- Challenge 3 -->
@@ -102,38 +102,38 @@
                 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">decrypted_text</span> = <span class="python-pink">""</span><br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">for</span> <span class="python-blue">code</span> <span class="python-purple">in</span> <span class="python-blue">ascii_codes</span>:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;decrypted_text += <span class="python-blue">chr</span>(<span class="python-blue">code</span>)<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">for</span> <span class="python-blue">code</span> <span class="python-purple">in</span> <span class="python-blue">ascii_codes</span>:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;decrypted_text += <span class="python-blue">chr</span>(<span class="python-blue">code</span>)<br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">return</span> decrypted_text<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">return</span> decrypted_text<br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">user_input =</span> <span class="python-orange2">input("Enter ASCII codes separated by space: ")</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">ascii_codes =</span><span class="python-orange2"> [int(code) for code in user_input.split()]</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">decrypted_text</span> = ascii_decrypt(<span class="python-blue">ascii_codes</span>)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(decrypted_text)  <span class="python-green1"># Output: Uifsf jt b tfdsfu dpef!</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">user_input =</span> <span class="python-orange2">input("Enter ASCII codes separated by space: ")</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">ascii_codes =</span><span class="python-orange2"> [int(code) for code in user_input.split()]</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">decrypted_text</span> = ascii_decrypt(<span class="python-blue">ascii_codes</span>)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(decrypted_text)  <span class="python-green1"># Output: Uifsf jt b tfdsfu dpef!</span><br>
                 
                     <!-- Challenge 4 -->
                     <button class="Challenge-btn glow-red" onclick="window.location.href='quest4.html';">def MeteData():</button> <br>
                     <!-- Challenge 4 ends -->
                     
                     &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">def</span> print_photo_metadata(<span class="python-blue">photo_path</span>):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">try</span>:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">image</span> = Image.<span class="python-blue">open</span>(<span class="python-blue">photo_path</span>)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">exif_data</span> = image._getexif()  <span class="python-green1"># Get Exif data</span><br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">try</span>:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">image</span> = Image.<span class="python-blue">open</span>(<span class="python-blue">photo_path</span>)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">exif_data</span> = image._getexif()  <span class="python-green1"># Get Exif data</span><br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">if</span> <span class="python-blue">exif_data</span>:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">for</span> tag, value <span class="python-purple">in</span> <span class="python-blue">exif_data</span>.<span class="python-blue">items</span>():<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label = ExifTags.TAGS.get(tag, tag)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(<span class="python-blue">f"{label}: {value}"</span>)<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">if</span> <span class="python-blue">exif_data</span>:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">for</span> tag, value <span class="python-purple">in</span> <span class="python-blue">exif_data</span>.<span class="python-blue">items</span>():<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label = ExifTags.TAGS.get(tag, tag)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(<span class="python-blue">f"{label}: {value}"</span>)<br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">else</span>:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(<span class="python-pink">"No Exif data found"</span>)<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">else</span>:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(<span class="python-pink">"No Exif data found"</span>)<br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">except</span> Exception <span class="python-purple">as</span> e:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(<span class="python-pink">f"Error: {e}"</span>)<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">except</span> Exception <span class="python-purple">as</span> e:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(<span class="python-pink">f"Error: {e}"</span>)<br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">photo_path</span> = <span class="python-pink">input(""path_to_your_photo.jpg" :")</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;print_photo_metadata(<span class="python-blue">photo_path</span>)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">photo_path</span> = <span class="python-pink">input(""path_to_your_photo.jpg" :")</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;print_photo_metadata(<span class="python-blue">photo_path</span>)<br>
                     <!-- Challenge 5 -->
                     <button class="Challenge-btn glow-red" onclick="window.location.href='quest5.html';">def caesar_decrypt(ciphertext, shift):</button> <br>
                     <!-- Challenge 5 ends -->
@@ -148,24 +148,24 @@
                     
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">return</span> decrypted_text<br><br>
                     
-                    <!-- Challenge 5 -->
-                    <button class="Challenge-btn glow-red" onclick="window.location.href='quest6.html';">def caesar_decrypt(ciphertext, shift):</button> <br>
-                    <!-- Challenge 5 ends -->
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">ciphertext</span> = <span class="python-pink">input("ifsf jt b tfdsfu dpef!")</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">shift</span> = <span class="python-blue">1</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">decrypted_text</span> = caesar_decrypt(<span class="python-blue">ciphertext</span>, <span class="python-blue">shift</span>)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(decrypted_text)  <span class="python-green1"># Output: There is a secret code!</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">ciphertext</span> = <span class="python-pink">input("ifsf jt b tfdsfu dpef!")</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">shift</span> = <span class="python-blue">1</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">decrypted_text</span> = caesar_decrypt(<span class="python-blue">ciphertext</span>, <span class="python-blue">shift</span>)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(decrypted_text)  <span class="python-green1"># Output: There is a secret code!</span><br>
+                    
+                    <!-- Challenge 6 -->
+                    <button class="Challenge-btn glow-red" onclick="window.location.href='quest6.html';">def  sequence_square(nsquares):</button> <br>
+                    <!-- Challenge 6 ends -->
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">squares</span> = []<br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">squares</span> = []<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">for</span> <span class="python-blue">i</span> <span class="python-purple">in</span> <span class="python-blue">range</span>(1, <span class="python-blue">n</span> + 1):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">squares</span>.<span class="python-blue">append</span>(<span class="python-blue">i</span> ** <span class="python-blue">2</span>)<br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">for</span> <span class="python-blue">i</span> <span class="python-purple">in</span> <span class="python-blue">range</span>(1, <span class="python-blue">n</span> + 1):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">squares</span>.<span class="python-blue">append</span>(<span class="python-blue">i</span> ** <span class="python-blue">2</span>)<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">return</span> <span class="python-green1">squares</span><br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-purple">return</span> <span class="python-green1">squares</span><br><br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">n</span> = <span class="python-blue">5</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">squares_sequence</span> = sequence_square(<span class="python-blue">n</span>)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(<span class="python-blue">squares_sequence</span>)  <span class="python-green1"># Output: [1, 4, 9, 16, 25]</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">n</span> = <span class="python-blue">5</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-blue">squares_sequence</span> = sequence_square(<span class="python-blue">n</span>)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="python-green1">print</span>(<span class="python-blue">squares_sequence</span>)  <span class="python-green1"># Output: [1, 4, 9, 16, 25]</span><br>
 
                    
                 </code>
