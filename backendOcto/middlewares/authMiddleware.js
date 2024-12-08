@@ -3,9 +3,8 @@ const Participant = require("../models/Participant"); // Modèle pour récupére
 require("dotenv").config();
 
 const authMiddleware = async (req, res, next) => {
-  // Vérifier si le token est passé dans l'en-tête 'Authorization'
-  const token =
-    req.header("Authorization") && req.header("Authorization").split(" ")[1]; // Format 'Bearer <token>'
+  
+  const token = req.cookies && req.cookies.token;
 
   if (!token) {
     return res

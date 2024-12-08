@@ -25,13 +25,12 @@ exports.joinTeam = async (req, res) => {
   const { email, name, teamPassword } = req.body;
 
   try {
+    // Trouver l'équipe et vérifier le mot de passe
     const team = await Team.findOne({ password: teamPassword });
     if (!team) {
-      return res.status(404).json({
-        status: "error",
-        title: "Authentication Failed",
-        message: "Team not found or incorrect password.",
-      });
+      return res
+        .status(404)
+        .json({ message: "Team not found or incorrect password." });
     }
 
     let participant = await Participant.findOne({ email });
@@ -57,6 +56,11 @@ exports.joinTeam = async (req, res) => {
       process.env.JWT, // Assurez-vous que votre clé secrète est bien configurée dans votre .env
       { expiresIn: "24h" }
     );
+    res.cookie("authToken", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production", // En production, utilisez HTTPS
+      maxAge: 24 * 60 * 60 * 1000,
+    });
 
     // Répondre avec un message de succès et le token
     res.status(200).json({ message: "Login successful", token });

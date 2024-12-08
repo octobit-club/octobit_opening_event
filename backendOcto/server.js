@@ -15,7 +15,9 @@ app.use('/api', challengeRouter);
 app.use('/api',teamRouter)
 app.use(cors({
   origin: 'https://event-octobit.fun/:3000', // Your frontend URL
-  methods: ['GET', 'POST'],       // Allowed methods
+  methods: ['GET', 'POST'],
+  credentials:true,
+         // Allowed methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
 }));
 // MongoDB Connection
