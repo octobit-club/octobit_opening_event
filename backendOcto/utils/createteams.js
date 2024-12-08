@@ -1,53 +1,54 @@
-require("dotenv").config(); // Charger les variables d'environnement
+require("dotenv").config(); // Load environment variables
 const mongoose = require("mongoose");
-const Team = require("../backend/models/Team"); // Assurez-vous que le chemin est correct
+const Team = require("../models/Team"); // Ensure the path is correct
 
-// Connexion à MongoDB
+// Connect to MongoDB
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("Connexion à MongoDB réussie.");
+    console.log("Connected to MongoDB.");
   } catch (error) {
-    console.error("Erreur de connexion à MongoDB:", error);
-    process.exit(1); // Arrêter le script si la connexion échoue
+    console.error("Error connecting to MongoDB:", error);
+    process.exit(1); // Exit the script if the connection fails
   }
 };
 
-// Création des équipes
-const createTeams = async () => {
-  const teams = [
-    { name: "Octobit Alpha", password: "Alpha7/l9" },
-    { name: "Octobit Beta", password: "Beta1:b0" },
-    { name: "Octobit Gamma", password: "Gamma0#m4" },
-    { name: "Octobit Delta", password: "Delta8&o5" },
-    { name: "Octobit Epsilon", password: "Epsilon2@q8" },
+// Add new teams without overwriting existing ones
+const addTeams = async () => {
+  const newTeams = [
+    { name: "Octobit Zeta", password: "Zeta6%t7" },
+    { name: "Octobit Eta", password: "Eta4*p9" },
+    { name: "Octobit Theta", password: "Theta3&d1" },
+    { name: "Octobit Iota", password: "Iota5!r2" },
+    { name: "Octobit Kappa", password: "Kappa7^u3" },
   ];
 
   try {
-    // Vérifiez si les équipes existent déjà
-    const existingTeams = await Team.countDocuments();
-    if (existingTeams > 0) {
-      console.log("Les équipes existent déjà. Pas besoin de les recréer.");
-      return;
+    for (const team of newTeams) {
+      // Check if the team already exists
+      const existingTeam = await Team.findOne({ name: team.name });
+      if (existingTeam) {
+        console.log(`Team "${team.name}" already exists. Skipping.`);
+      } else {
+        // Add the team if it doesn't exist
+        await Team.create(team);
+        console.log(`Team "${team.name}" added successfully.`);
+      }
     }
-
-    // Insérer les équipes
-    await Team.insertMany(teams);
-    console.log("Équipes insérées avec succès.");
   } catch (error) {
-    console.error("Erreur lors de l'insertion des équipes:", error);
+    console.error("Error adding teams:", error);
   } finally {
-    mongoose.connection.close(); // Fermer la connexion après l'opération
+    mongoose.connection.close(); // Close the connection after the operation
   }
 };
 
-// Exécuter le script
+// Execute the script
 const run = async () => {
   await connectDB();
-  await createTeams();
+  await addTeams();
 };
 
 run();
