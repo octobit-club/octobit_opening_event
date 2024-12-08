@@ -31,6 +31,7 @@ async function joinTeamFrontend(email, name, teamPassword) {
           title: "swal-title-small", // Styling title for compact size
         },
       });
+      window.location.href("quests.html");
     } else {
       // Styled error alert
       Swal.fire({
