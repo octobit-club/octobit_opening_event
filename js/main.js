@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3001/api";
+const API_BASE_URL = "https://event-octobit.fun/api";
 
 // Function to fetch challenges and dynamically update buttons
 async function fetchChallenges() {
@@ -23,6 +23,7 @@ async function fetchChallenges() {
 
     const challenges = await response.json(); // Array of challenge objects
     updateChallengeButtons(challenges); // Update buttons with challenge data
+    checkAllChallengesCorrected(challenges);
   } catch (error) {
     console.error("Error fetching challenges:", error);
   }
@@ -52,7 +53,7 @@ function updateChallengeButtons(challenges) {
       // Add click event to redirect to quest page based on index
       const questPage = `quest${index + 1}.html`; // File names follow the format quest1.html, quest2.html, etc.
       challengeButton.addEventListener("click", () => {
-        window.location.href = `${questPage}?challengeId=${challenge._id}`;
+        window.location.href = `${questPage}`;
       });
     }
   });
@@ -61,3 +62,35 @@ function updateChallengeButtons(challenges) {
 // Call fetchChallenges when the DOM is loaded
 document.addEventListener("DOMContentLoaded", fetchChallenges);
 
+function checkAllChallengesCorrected(challenges) {
+  const saveButton = document.getElementById("save-world-btn"); // Assuming you have an id for the button
+  const allCorrected = challenges.every(challenge => challenge.status === "corrected");
+
+  if (allCorrected) {
+    saveButton.disabled = false; // Enable the button if all challenges are corrected
+    saveButton.classList.remove("cursur_no"); // Remove the cursor-no class
+    saveButton.addEventListener("click", () => {
+      window.location.href = "you_saved_the_world.html"; // Redirect when clicked
+    });
+  } else {
+    saveButton.disabled = true; // Keep the button disabled if not all challenges are corrected
+    saveButton.classList.add("cursur_no"); // Ensure the cursor is disabled
+  }
+}
+function checkAuthCookieForSaveTheWorld() {
+  const cookie = document.cookie;
+  
+  // Vérifie si le cookie d'authentification (par exemple, "auth_token") est présent
+  if (!cookie.includes("token")) {
+    // Si le cookie n'est pas trouvé, rediriger vers la page de connexion
+    window.location.href = "/login.html";
+  }
+}
+
+// Appeler la fonction dès que le DOM est chargé
+document.addEventListener("DOMContentLoaded", function() {
+  // Vérifiez ici si vous êtes sur la page "Save the World"
+  if (window.location.pathname === "/save_the_world.html") {
+    checkAuthCookieForSaveTheWorld();
+  }
+});
