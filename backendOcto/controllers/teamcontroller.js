@@ -56,7 +56,7 @@ exports.joinTeam = async (req, res) => {
       process.env.JWT, // Assurez-vous que votre clé secrète est bien configurée dans votre .env
       { expiresIn: "24h" }
     );
-    res.cookie("authToken", token, {
+    res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production", // En production, utilisez HTTPS
       maxAge: 24 * 60 * 60 * 1000,

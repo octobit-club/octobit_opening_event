@@ -4,7 +4,7 @@ require("dotenv").config();
 
 const authMiddleware = async (req, res, next) => {
   
-  const token = req.cookies && req.cookies.token;
+  const token =req.cookies.token;
 
   if (!token) {
     return res
