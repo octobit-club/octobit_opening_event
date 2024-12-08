@@ -6,33 +6,37 @@ const ChallengeProgress = require("../models/ChallengeProgress");
 // Soumettre une solution à un challenge
 
 exports.submitAndSolveChallenge = async (req, res) => {
-  const { challengeId } = req.params; // Challengeid from url
-  const { flag } = req.body;
-  const participantId = req.participant.id; // (via middleware)
-  const teamId = req.participant.teamId; 
-
+  const { challengeId } = req.params; // Challenge ID from URL
+  const  flag  = req.body.correctFlag;
+  const participantId = req.participant?.id; // Extract from middleware
+  const teamId = req.participant?.teamId;
+  console.log("Request Body:", req.body);
+  console.log("Flag Submitted:", flag);
+  console.log("Challenge ID:", challengeId);
+  console.log("Participant Info:", req.participant);
   try {
-    // 1. Récupérer le challenge de la base
+    // 1. Retrieve the challenge from the database
     const challenge = await Challenge.findById(challengeId);
     if (!challenge) {
       return res.status(404).json({ message: "Challenge introuvable." });
     }
 
-    // 2. Vérifier la progression de l'équipe pour ce challenge
+    // 2. Retrieve the team's progress for the challenge
     let progress = await ChallengeProgress.findOne({ teamId, challengeId });
 
-    // 3. Si déjà corrigé, retourner une erreur
+    // 3. If already solved, return an error
     if (progress && progress.status === "corrected") {
       return res
         .status(400)
         .json({ message: "Ce challenge a déjà été corrigé." });
     }
 
-    // 4. Vérifier si le flag soumis est correct
-    if (flag === challenge.correctFlag) {
-      // Mettre à jour ou créer une entrée de progression
+    // 4. Validate the submitted flag    console.log(flag.trim());
+    console.log(flag);
+    
+    if (flag === challenge.correctFlag.trim()) {
+      // Update or create a progress entry
       if (!progress) {
-        // Si la progression n'existe pas, la créer
         progress = new ChallengeProgress({
           teamId,
           challengeId,
@@ -40,32 +44,33 @@ exports.submitAndSolveChallenge = async (req, res) => {
           solvedBy: participantId,
         });
       } else {
-        // Sinon, mettre à jour l'entrée existante
         progress.status = "corrected";
         progress.solvedBy = participantId;
       }
       await progress.save();
 
-      // 5. (Optionnel) Mettre à jour les données du participant
+      // 5. (Optional) Update participant's completed challenges
       await Participant.findByIdAndUpdate(participantId, {
         $push: { completedChallenges: challengeId },
       });
 
-      // 6. Retourner une réponse indiquant le succès
-      return res
-        .status(200)
-        .json({ message: "Challenge corrigé avec succès.", progress });
+      // 6. Return a success response
+      return res.status(200).json({
+        message: "Challenge corrigé avec succès.",
+        progress,
+      });
     } else {
-      // Flag incorrect
+      // Incorrect flag
       return res.status(400).json({ message: "Flag incorrect." });
     }
   } catch (error) {
-    console.error(error);
-    res
+    console.error("Error submitting challenge:", error);
+    return res
       .status(500)
       .json({ message: "Erreur lors de la soumission du challenge." });
   }
 };
+
 
 // Récupérer les challenges et leur statut pour une équipe spécifique
 
