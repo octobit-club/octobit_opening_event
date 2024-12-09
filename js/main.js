@@ -70,6 +70,7 @@ function checkAllChallengesCorrected(challenges) {
     saveButton.disabled = false; // Enable the button if all challenges are corrected
     saveButton.classList.remove("cursur_no"); // Remove the cursor-no class
     saveButton.addEventListener("click", () => {
+      checkAuthCookieForSaveTheWorld();
       window.location.href = "you_saved_the_world.html"; // Redirect when clicked
     });
   } else {
@@ -90,7 +91,7 @@ function checkAuthCookieForSaveTheWorld() {
 // Appeler la fonction dès que le DOM est chargé
 document.addEventListener("DOMContentLoaded", function() {
   // Vérifiez ici si vous êtes sur la page "Save the World"
-  if (window.location.pathname === "/save_the_world.html") {
+  if (window.location.pathname === "/you_saved_the_world.html") {
     checkAuthCookieForSaveTheWorld();
   }
 });
