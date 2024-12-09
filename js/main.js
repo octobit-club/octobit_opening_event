@@ -90,7 +90,7 @@ function checkAuthCookieForSaveTheWorld() {
 // Appeler la fonction dès que le DOM est chargé
 document.addEventListener("DOMContentLoaded", function() {
   // Vérifiez ici si vous êtes sur la page "Save the World"
-  if (window.location.pathname === "/save_the_world.html") {
+  if (window.location.pathname === "/you_saved_the_world.html") {
     checkAuthCookieForSaveTheWorld();
   }
 });
