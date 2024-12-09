@@ -16,11 +16,18 @@ async function joinTeamFrontend(email, name, teamPassword) {
         icon: "success",
         title: "🎉 Joined Successfully!",
         html: `
-          <div style="font-size: 14px; color: #ff0000; /* Base color of the text */
-          text-shadow: 0 0 10px red, /* Inner glow */ 0 0 20px red,
-            /* Outer glow */ 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red; margin: "20px";padding: "20px"; font-weight: bold;">
-            Welcome to the team!
-          </div>
+        <div style="font-size: 14px; color: green; /* Base color of the text */
+        text-shadow: 0 0 10px green, /* Inner glow */ 
+                     0 0 20px green, /* Outer glow */ 
+                     0 0 30px green, 
+                     0 0 40px green, 
+                     0 0 50px green, 
+                     0 0 60px green; 
+        margin: 20px; 
+        padding: 20px; 
+        font-weight: bold;">
+  Welcome to the team!
+</div>
           
         `,
         background: "#000000", // White background
